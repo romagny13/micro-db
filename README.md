@@ -230,7 +230,7 @@ class PostModel extends Model
 
 ### All
 
-get all the records al the table
+get all the records of the table
 
 ```php
 $posts = PostModel::all();
