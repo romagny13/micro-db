@@ -1,0 +1,25 @@
+{
+    "name": "romagny13/micro-db",
+    "type": "library",
+    "description": "MicroPHP DB library",
+    "keywords": ["micro","microphp","db"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jerome Romagny",
+            "email": "romagny13@yahoo.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MicroPHP\\Db\\": "src"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "scripts":{
+        "test": "phpunit -c ."
+    }
+}
