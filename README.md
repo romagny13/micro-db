@@ -55,7 +55,7 @@ select [posts].[id],[title],[content],[users].[id],[users].[username] from [post
 
 Examples:
 
-### select
+### Select
 
 ```php
 $posts = Db::getInstance()
@@ -97,7 +97,7 @@ var_dump($queryString);
 select `posts`.`id`,`title`,`content`,`user_id`,`users`.`id`,`users`.`username` from `posts`,`users` where user_id=1 order by `title` desc,`content` desc limit 2,10
 ```
 
-## insert
+## Insert
 
 ```php
 $success = Db::getInstance()
@@ -121,7 +121,7 @@ and get the last inserted id
 $id = Db::getInstance()->lastInsertId();
 ```
 
-## update
+## Update
 
 ```php
 $success = Db::getInstance()
@@ -134,7 +134,7 @@ $success = Db::getInstance()
     ->execute();
 ```
 
-## delete
+## Delete
 
 ```php
 $success = Db::getInstance()
@@ -143,7 +143,7 @@ $success = Db::getInstance()
     ->execute();
 ```
 
-### condition helpers
+### Condition helper
 
 * op
 * in
@@ -228,7 +228,7 @@ class PostModel extends Model
 }
 ```
 
-### all
+### All
 
 get all the records al the table
 
@@ -251,7 +251,7 @@ Example: only 10 posts (maximum) will be returned after 2 posts
 $posts = PostModel::all(2,10);
 ```
 
-### where
+### Where
 
 Allow to select the records to return (array)
 
@@ -271,7 +271,7 @@ With offset + limit
 $posts = PostModel::where('user_id=1 or user_id=2',2,10);
 ```
 
-### find
+### Find
 
 Returns only one item.
 
@@ -279,7 +279,7 @@ Returns only one item.
 $post = PostModel::find(Condition::op('id',1));
 ```
 
-### create
+### Create
 
 Example:
 
@@ -291,7 +291,7 @@ $success = PostModel::create([
 ]);
 ```
 
-### update
+### Update
 
 Example:
 
@@ -302,7 +302,7 @@ $success = PostModel::update([
 ],Condition::op('id',1));
 ```
 
-### delete
+### Delete
 
 Example:
 
@@ -310,11 +310,11 @@ Example:
 $success = PostModel::delete(Condition::op('id',1));
 ```
 
-### query and prepare
+### Query and prepare
 
 Are shortcuts to Db functions.
 
-### relations
+### Relations
 
 Add relations (0-1) or (1-1) to other models 
 
