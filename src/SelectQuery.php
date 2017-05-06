@@ -101,10 +101,8 @@ class SelectQuery
     }
     
     public function fetch($className=null){
-        // build la request
         $queryString = $this->build();
 
-        // executer
         if(isset($className)){
             return Db::getInstance()->query($queryString)->fetchObject($className);
         }
@@ -114,10 +112,8 @@ class SelectQuery
     }
 
     public function fetchAll($className=null){
-        // build la request
         $queryString = $this->build();
 
-        // executer
         if(isset($className)){
             return Db::getInstance()->query($queryString)->fetchAllWithClass($className);
         }

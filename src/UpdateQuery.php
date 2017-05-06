@@ -45,7 +45,6 @@ class UpdateQuery
     }
 
     public function execute(){
-        // build la request
         $queryString = $this->build();
 
         return Db::getInstance()->query($queryString)->execute();

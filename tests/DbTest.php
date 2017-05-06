@@ -111,18 +111,6 @@ class DbTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(count($result)> 1);
     }
 
-    public function testSelect_WithRelation(){
-//        $post = Db::getInstance()->query('select * from posts,users where id=?')
-//            ->fetchObject(FakePosts::class,[1]);
-//
-//        
-//        $user = Db::getInstance()->query('select * from posts,users where id=?')
-//            ->fetchObject(FakePosts::class,[1]);
-//        
-//        $this->assertTrue(count($result)> 1);
-    }
-
-
     // delete
 
     public function testDelete(){
@@ -140,15 +128,4 @@ class DbTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($result);
     }
 
-    // delete tables
-
-//    public function testDeleteTables(){
-//        Db::getInstance() = $this->getDb();
-//        // all
-//        $result = Db::getInstance()->query("drop table posts,users")
-//            ->execute()
-//            ->rowCount();
-//
-//        $this->assertEquals(2,$result);
-//    }
 }

@@ -15,7 +15,7 @@ class Db
         if(!isset(self::$instance)){
             self::$instance = new Db();
             if($connect){
-                if(!isset(self::$settings)) { throw new \Exception('No settings. Use setSettings to define db settings'); }
+                if(!isset(self::$settings)) { throw new \Exception('No settings found. Use setConnectionStringSettings to define connection informations.'); }
                 self::$instance->connect(self::$settings['dsn'],self::$settings['username'],self::$settings['password'],self::$settings['options']);
             }
         }

@@ -86,7 +86,6 @@ class Model
             $queryString = $query->build();
             $statement = Db::getInstance()->query($queryString);
             while ($row = $statement->fetchObject($className)) {
-                //var_dump($row);
                 array_push($result, self::getRelatedModels($model->relations, $row));
             }
             return $result;
@@ -128,7 +127,7 @@ class Model
         if($model->hasRelations()) {
            return self::getRelatedModels($model->relations, $result);
         }
-        return $result;
+        return $result === false ? null : $result;
     }
 
     public static function create($columnValues){
